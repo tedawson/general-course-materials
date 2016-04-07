@@ -1,0 +1,31 @@
+<!-- CSS fuer die Legende. In map.html direkt vor </style>  einfuegen -->
+
+.legend label,
+.legend span {
+  display:block;
+  float:left;
+  height:20px;
+  width:25%;
+  text-align:center;
+  font-size:9px;
+  color:#808080;
+  }
+  
+<!-- HTML fuer die Legende. In map.html direkt unter <body> einfuegen  -->
+  
+<div id='legend' style='display:none;'>
+  <strong>Das ist die &Uumlberschrift f&uumlr die Legende</strong>
+  <nav class='legend clearfix'>
+    <span style='background:#FFFC1A;'></span>
+	<span style='background:#09FF00;'></span>
+	<span style='background:#1583FF;'></span>
+    <span style='background:#F40B0B;'></span> 
+    <label>Farbe 1</label>
+    <label>Farbe 2</label>
+    <label>Farbe 3</label>
+    <label>Farbe 4</label>
+</div>
+
+//JavaScript fuer die Legende. In map.js ganz unten einfuegen
+
+map.legendControl.addLegend(document.getElementById('legend').innerHTML);
